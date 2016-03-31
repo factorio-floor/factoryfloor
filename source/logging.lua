@@ -1,5 +1,5 @@
 
-LOGGING_DEBUG = false
+LOGGING_ENABLED = true
 LOG_LEVEL = 1 -- 1=info 2=warning 3=error
 
 local printIndex = 1
@@ -36,7 +36,7 @@ end
 
 logging.log = function(message,level)
 	if not level then level="ANY" end
-	if LOGGING_DEBUG then
+	if LOGGING_ENABLED then
 		if type(message) ~= "string" then
 			message = serpent.block(message)
 		end
