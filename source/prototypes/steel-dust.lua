@@ -6,7 +6,7 @@ addItem("steel-dust","raw-material","d1[steel-plate]",50)
 
 -- Calculate ore->plate factor for Recipes
 local ironPlateUsed = findRawIngredient("steel-plate","iron-plate")
-info(tostring(ironPlateUsed).."x Iron-plate = 1x Steel-plate")
+logging.info(tostring(ironPlateUsed).."x Iron-plate = 1x Steel-plate")
 local benefit = 0.2 -- 20% less iron-plates useed
 local cost = math.floor(ironPlateUsed * 0.8 / ironOreToPlateFactor)
 
