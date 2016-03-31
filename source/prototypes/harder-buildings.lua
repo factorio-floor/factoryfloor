@@ -5,11 +5,11 @@ require "prototypes.harder-iron-processing"
 require "prototypes.harder-copper-processing"
 
 local recipeWhiteList = table.set({
-	"gun-turret", "laser-turret", "radar", "rocket-silo", "basic-splitter", "fast-splitter", "express-splitter", "smart-inserter",  
-	"big-electric-pole", "substation", "train-stop", "diesel-locomotive", "tank", "logistic-robot", 
-	"construction-robot", "logistic-chest-active-provider", "logistic-chest-passive-provider", 
-	"logistic-chest-requester", "logistic-chest-storage", "roboport", 
-	"solar-panel", "basic-accumulator", "pumpjack", "electric-furnace", "electric-incinerator", "pulverizer", "assembling-machine-2", 
+	"gun-turret", "laser-turret", "radar", "rocket-silo", "basic-splitter", "fast-splitter", "express-splitter", "smart-inserter",
+	"big-electric-pole", "substation", "train-stop", "diesel-locomotive", "tank", "logistic-robot",
+	"construction-robot", "logistic-chest-active-provider", "logistic-chest-passive-provider",
+	"logistic-chest-requester", "logistic-chest-storage", "roboport",
+	"solar-panel", "basic-accumulator", "pumpjack", "electric-furnace", "electric-incinerator", "pulverizer", "assembling-machine-2",
 	"assembling-machine-3", "oil-refinery", "chemical-plant", "lab", "basic-beacon" })
 
 -- Item: --

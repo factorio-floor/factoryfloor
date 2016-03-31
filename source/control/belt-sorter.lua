@@ -1,13 +1,13 @@
 require "control.AccessFactory"
 
 function beltSorterInit()
-	if not global.hardCrafting.beltSorter then	
+	if not global.hardCrafting.beltSorter then
 		global.hardCrafting.beltSorter = {}
 	end
 end
 
 function beltSorterBuiltEntity(entity)
-	if entity.name == "belt-sorter" then	
+	if entity.name == "belt-sorter" then
 		table.insert(global.hardCrafting.beltSorter, entity)
 	end
 end
@@ -45,12 +45,12 @@ function updateBeltSorter(event)
 						end
 					end
 				end
-				
+
 			end
-			
+
 			--debug("input belts: "..#input)
 			--debug("output belts: "..#output)
-			
+
 			-- Build filter table from inventory
 			local filter = {} -- {direction = {itemName, ..}}
 			local slotIndexToDirection = {[0]=defines.direction.north, [1]=defines.direction.west,
@@ -63,7 +63,7 @@ function updateBeltSorter(event)
 					table.insert(filter[slotRow],inventory[i].name)
 				end
 			end
-			
+
 			-- Distribute items on output belts
 			for _,outputAccess in pairs(output) do
 				local beltSide = outputAccess.getSide()
@@ -72,7 +72,7 @@ function updateBeltSorter(event)
 					for _,itemName in pairs(filter[beltSide]) do
 						for _,inputAccess in pairs(input) do
 							if not inputAccess then warn(input) end
-		
+
 							if inputAccess.contains_item(itemName) then
 								local itemStack = {name=itemName,count=1}
 								local result = inputAccess.remove_item(itemStack)

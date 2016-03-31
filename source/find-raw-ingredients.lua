@@ -65,7 +65,7 @@ function findRawIngredient(itemName,rawResourceName)
 		if not rawIngredients[name] or not rawIngredients[name][rawResourceName] then
 			findRawIngredient(name,rawResourceName)
 		end
-		rawIngredients[itemName][rawResourceName] = rawIngredients[itemName][rawResourceName] + 
+		rawIngredients[itemName][rawResourceName] = rawIngredients[itemName][rawResourceName] +
 			amount * rawIngredients[name][rawResourceName] / output
 	end
 

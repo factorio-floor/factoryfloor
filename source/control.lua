@@ -120,7 +120,7 @@ function printMissingRecipeLocalization()
 				out=out..recipeName..","..itemName[1].."\n"
 			end
 			game.write_file("hardCrafting-test.txt",out)
-			
+
 			out = "local recipeWhiteList = table.set({"
 			for recipeName,_ in pairs(newLocale) do
 				out=out.."\""..recipeName.."\", "

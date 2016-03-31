@@ -80,7 +80,7 @@ end
 
 function recipeItemAmount(recipe,itemName)
 	for _,tuple in pairs(recipe.ingredients) do
-		if tuple[1] == itemName then 
+		if tuple[1] == itemName then
 			return tuple[2]
 		end
 	end
