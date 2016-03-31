@@ -1,7 +1,7 @@
 require "libff.lua-extensions"
 require "defines"
 require "libff.find-raw-ingredients"
-require "logging"
+require "libff.logging"
 require "control.belt-sorter"
 
 function recipeResultsItemAmount(recipe,itemName)
