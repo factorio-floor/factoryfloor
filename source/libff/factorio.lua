@@ -1,4 +1,5 @@
-require "logging"
+-- This appears to take effect ... globally? So Lua has NO encapsulation?
+require "libff.logging"
 
 function addItem(itemName, subgroup, order, stackSize)
 	data:extend({
