@@ -1,5 +1,5 @@
 -- Incinerator hidden Recipes
--- This file must be included only in data-final-fixes, otherwise not all items can be inserted in the incinerator
+-- This file must be included last, otherwise not all items can be inserted in the incinerator
 
 local burnTime = {
 	landfill2by2 = 75,
