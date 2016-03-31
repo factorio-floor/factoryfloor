@@ -1,5 +1,5 @@
 require "basic-lua-extensions"
-require "functions"
+require "libff.factorio"
 
 -- Features:
 require "prototypes.fast-long-inserter"

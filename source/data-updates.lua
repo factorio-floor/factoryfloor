@@ -1,4 +1,4 @@
-require "functions"
+require "libff.factorio"
 
 -- Required:
 require "prototypes.bigger-mining-drills"
