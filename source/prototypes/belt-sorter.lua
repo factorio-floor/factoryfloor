@@ -5,7 +5,7 @@ beltSorter["name"]="belt-sorter"
 beltSorter["order"]="z[belt-sorter]"
 beltSorter["subgroup"]="inserter"
 beltSorter["place_result"]="belt-sorter"
-beltSorter.icon = "__hardCrafting__/graphics/icons/belt-sorter.png"
+beltSorter.icon = "__factoryfloor__/graphics/icons/belt-sorter.png"
 data:extend({	beltSorter })
 
 -- Recipe
@@ -28,8 +28,8 @@ local beltSorter = deepcopy(data.raw["container"]["wooden-chest"])
 beltSorter.name = "belt-sorter"
 beltSorter.minable.result = "belt-sorter"
 beltSorter.inventory_size = 40
-beltSorter.icon = "__hardCrafting__/graphics/icons/belt-sorter.png"
-beltSorter.picture.filename="__hardCrafting__/graphics/entity/belt-sorter.png"
+beltSorter.icon = "__factoryfloor__/graphics/icons/belt-sorter.png"
+beltSorter.picture.filename="__factoryfloor__/graphics/entity/belt-sorter.png"
 beltSorter.fuel_value = nil
 data:extend({	beltSorter })
 
@@ -38,7 +38,7 @@ data:extend({
   {
     type = "technology",
     name = "belt-sorter",
-    icon = "__hardCrafting__/graphics/technology/belt-sorter.png",
+    icon = "__factoryfloor__/graphics/technology/belt-sorter.png",
 		icon_size = 128,
     prerequisites = {"circuit-network","advanced-electronics" },
     effects = {},

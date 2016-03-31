@@ -2,7 +2,7 @@ data:extend({
 	{
     type = "item",
     name = "electro-magnet",
-    icon = "__hardCrafting__/graphics/icons/electro-magnet.png",
+    icon = "__factoryfloor__/graphics/icons/electro-magnet.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "intermediate-product",
     order = "h3[electric-engine-unit]",

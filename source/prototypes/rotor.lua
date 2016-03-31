@@ -2,7 +2,7 @@ data:extend({
 	{
     type = "item",
     name = "rotor",
-    icon = "__hardCrafting__/graphics/icons/rotor.png",
+    icon = "__factoryfloor__/graphics/icons/rotor.png",
     flags = {"goes-to-main-inventory"},
     subgroup = "intermediate-product",
     order = "h2[electric-engine-unit]",

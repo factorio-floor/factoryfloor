@@ -18,7 +18,7 @@ for _,typ in pairs(types) do
 				type = "recipe",
 				name = "incinerate_"..name,
 				category = "incinerator",
-				icon = "__hardCrafting__/graphics/icons/fire.png",
+				icon = "__factoryfloor__/graphics/icons/fire.png",
 				hidden = true,
 				ingredients = {{name, 1}},
 				energy_required = time,

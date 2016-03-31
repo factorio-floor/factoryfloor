@@ -5,7 +5,7 @@ function addItem(itemName, subgroup, order, stackSize)
 		{
 			type = "item",
 			name = itemName,
-			icon = "__hardCrafting__/graphics/icons/"..itemName..".png",
+			icon = "__factoryfloor__/graphics/icons/"..itemName..".png",
 			flags = {"goes-to-main-inventory"},
 			subgroup = subgroup,
 			order = order,
@@ -46,7 +46,7 @@ function addRecipe(name,category,subgroup,timeRequired,ingredients,results,order
 		subgroup = subgroup,
     energy_required = timeRequired,
     ingredients = ingredients,
-		icon = "__hardCrafting__/graphics/icons/"..imageName..".png",
+		icon = "__factoryfloor__/graphics/icons/"..imageName..".png",
     results = resultsDetailled,
 		order = order
 	}

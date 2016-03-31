@@ -1,9 +1,10 @@
 {
-	"name": "hardCrafting",
-	"version": "0.3.8",
-	"title": "Hard crafting",
-	"author": "judos",
-	"description": "Modifies vanilla crafting and smelting to be much trickier, you will need better planning and more clever setup",
+	"name": "factoryfloor",
+	"version": "0.1.0",
+	"title": "Factory Floor",
+	"author": "thorsummoner",
+	"description": "Big Plans",
 	"dependencies": ["base >= 0.12.11", "? Landfill >= 2.1.7", "? fluid-barrel >= 1.0.0", "? marathon >= 0.5.4"],
-	"homepage": "https://github.com/judos/hardCrafting"
+    "homepage": "TBD",
+	"license": "GNU GPL v3"
 }

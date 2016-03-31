@@ -6,7 +6,7 @@ data:extend({
   {
     type = "item",
     name = "electric-incinerator",
-    icon = "__hardCrafting__/graphics/icons/electric-incinerator.png",
+    icon = "__factoryfloor__/graphics/icons/electric-incinerator.png",
     flags = {"goes-to-quickbar"},
     subgroup = "advanced-processing-machine",
     order = "b",
@@ -45,7 +45,7 @@ data:extend({
   {
     type = "technology",
     name = "electric-incinerator",
-    icon = "__hardCrafting__/graphics/technology/electric-incinerator.png",
+    icon = "__factoryfloor__/graphics/technology/electric-incinerator.png",
     icon_size = 128,
     prerequisites = prerequisites,
     effects = {
