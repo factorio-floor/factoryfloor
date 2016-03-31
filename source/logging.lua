@@ -1,26 +1,6 @@
 
-debug_master = false -- Master switch for debugging, shows most things!
-debug_level = 1 -- 1=info 2=warning 3=error
-
-function info(message)
-	if debug_level<=1 then debug(message,"INFO") end
-end
-function warn(message)
-	if debug_level<=2 then debug(message,"WARN") end
-end
-function error(message)
-	if debug_level<=3 then debug(message,"ERROR") end
-end
-
-function debug(message,level)
-	if not level then level="ANY" end
-	if debug_master then
-		if type(message) ~= "string" then
-			message = serpent.block(message)
-		end
-		print(level..": "..message)
-	end
-end
+LOGGING_DEBUG = false
+LOG_LEVEL = 1 -- 1=info 2=warning 3=error
 
 local printIndex = 1
 function PlayerPrint(message)
@@ -33,3 +13,53 @@ function PlayerPrint(message)
 		printIndex = printIndex + 1
 	end
 end
+
+-- Namespaced Logger
+
+logging = {}
+
+logging.info = function(message)
+	if LOG_LEVEL<=1 then logging.log(message,"INFO") end
+end
+
+logging.warn = function(message)
+	if LOG_LEVEL<=2 then logging.log(message,"WARN") end
+end
+
+logging.error = function(message)
+	if LOG_LEVEL<=3 then logging.log(message,"ERROR") end
+end
+
+logging.debug = function(message)
+	if LOG_LEVEL<=3 then logging.log(message,"ERROR") end
+end
+
+logging.log = function(message,level)
+	if not level then level="ANY" end
+	if LOGGING_DEBUG then
+		if type(message) ~= "string" then
+			message = serpent.block(message)
+		end
+		print(level..": "..message)
+	end
+end
+
+-- Depricated Loggerrs
+
+function info(message)
+	logging.warn("function 'info' will be removed in a future version, use 'logging.info'")
+	print(debug.traceback())
+	logging.info(message)
+end
+function warn(message)
+	logging.warn("function 'warn' will be removed in a future version, use 'logging.warn'")
+	print(debug.traceback())
+	logging.warn(message)
+	print(debug.traceback())
+end
+function error(message)
+	logging.warn("function 'error' will be removed in a future version, use 'logging.error'")
+	print(debug.traceback())
+	logging.error(message)
+end
+-- we can't offer the 'debug' namespace anymore because its a lua builtin (that we use)
