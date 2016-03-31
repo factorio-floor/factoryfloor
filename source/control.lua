@@ -1,6 +1,6 @@
 require "libff.lua-extensions"
 require "defines"
-require "find-raw-ingredients"
+require "libff.find-raw-ingredients"
 require "logging"
 require "control.belt-sorter"
 

@@ -1,4 +1,4 @@
-require "find-raw-ingredients"
+require "libff.find-raw-ingredients"
 
 -- Item: --
 addItem("steel-dust","raw-material","d1[steel-plate]",50)
