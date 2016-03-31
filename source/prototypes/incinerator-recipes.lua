@@ -1,5 +1,5 @@
 -- Incinerator hidden Recipes
--- This file must be included only in data-final-fixes, otherwise not all items can be inserted in the incinerator
+-- This file must be included last, otherwise not all items can be inserted in the incinerator
 
 local burnTime = {
 	landfill2by2 = 75,
@@ -9,10 +9,10 @@ local burnTime = {
 local types = {"item", "gun", "armor", "ammo", "blueprint", "deconstruction-item","mining-tool"}
 for _,typ in pairs(types) do
 	for name,itemTable in pairs(data.raw[typ]) do
-		
+
 		local time = 4
 		if burnTime[name] then time = burnTime[name] end
-		
+
 		data:extend({
 			{
 				type = "recipe",

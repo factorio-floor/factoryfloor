@@ -1,9 +1,9 @@
 function newTransportLinesAccess (line1,line2,accessTarget,accessFrom)
 	local self = {
 		line1 = line1,
-		line2 = line2	
+		line2 = line2
 	}
-	
+
 	function self.contains_item(itemName)
 		if self.line1.get_item_count(itemName) > 0 then return true end
 		if self.line2.get_item_count(itemName) > 0 then return true end

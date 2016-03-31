@@ -1,4 +1,5 @@
-require "logging"
+-- This appears to take effect ... globally? So Lua has NO encapsulation?
+require "libff.logging"
 
 function addItem(itemName, subgroup, order, stackSize)
 	data:extend({
@@ -80,7 +81,7 @@ end
 
 function recipeItemAmount(recipe,itemName)
 	for _,tuple in pairs(recipe.ingredients) do
-		if tuple[1] == itemName then 
+		if tuple[1] == itemName then
 			return tuple[2]
 		end
 	end

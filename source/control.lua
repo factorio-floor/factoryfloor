@@ -1,9 +1,17 @@
-require "basic-lua-extensions"
+require "libff.lua-extensions"
 require "defines"
-require "controlFunctions"
-require "find-raw-ingredients"
+require "libff.find-raw-ingredients"
 require "logging"
 require "control.belt-sorter"
+
+function recipeResultsItemAmount(recipe,itemName)
+	for _,itemStack in pairs(recipe.products) do
+		if itemStack.name == itemName then
+			return itemStack.amount
+		end
+	end
+	return 0
+end
 
 -- Init --
 script.on_init(function()
@@ -120,7 +128,7 @@ function printMissingRecipeLocalization()
 				out=out..recipeName..","..itemName[1].."\n"
 			end
 			game.write_file("hardCrafting-test.txt",out)
-			
+
 			out = "local recipeWhiteList = table.set({"
 			for recipeName,_ in pairs(newLocale) do
 				out=out.."\""..recipeName.."\", "

@@ -1,5 +1,5 @@
-require "basic-lua-extensions"
-require "functions"
+require "libff.lua-extensions"
+require "libff.factorio"
 
 -- Features:
 require "prototypes.fast-long-inserter"
@@ -14,3 +14,24 @@ require "prototypes.belt-sorter"
 
 -- Optional features:
 --require "prototypes.engines-and-robots"
+
+
+-- Updates
+-- -------
+require "libff.factorio"
+
+-- Required:
+require "prototypes.bigger-mining-drills"
+
+-- Integration with recipes of other mods
+require "prototypes.fluid-barrels"
+require "prototypes.landfill"
+
+
+-- Final fixes
+-- -----------
+require "libff.lua-extensions"
+require "libff.factorio"
+
+require "prototypes.incinerator-recipes"
+require "prototypes.easier-but-more-trains"
