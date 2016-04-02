@@ -14,3 +14,6 @@ require "prototypes.harder-iron-processing"
 require "prototypes.harder-copper-processing"
 require "prototypes.harder-coal"
 require "prototypes.steel-dust"
+
+-- Salvaging:
+require "prototypes.entity.salvage"
